@@ -6,12 +6,19 @@
 Examples: Netflix subscription, Network service providers
 
 *Classification analysis* is a data analytics technique that can be used to predict customer churn. Data analytics professionals typically use *machine learning algorithms* such as logistic regression, decision trees, and support vector machines to predict customer churn using classification analysis. These algorithms analyze data such as customer demographics, purchase history, and interactions with the company to identify patterns that can predict customer churn.
+
 The Dataset used: Telco-Customer-Churn.csv
+
 The dataset includes information about:
+
 It has 21 columns
+
 Customers who left within the last month – the column is called Churn
+
 Each customer has signed up for services such as phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies.
+
 Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
+
 Demographic info about customers – gender, age range, and if they have partners and dependents
 
 
