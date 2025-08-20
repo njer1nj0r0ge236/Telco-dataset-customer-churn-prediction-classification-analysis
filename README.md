@@ -97,8 +97,8 @@ The final selected model achieved:
 ---
 
 ## ⚙️ Installation & Usage  
-Clone the repository:  
 ```bash
+Clone the repository:
 git clone https://github.com/your-username/telco-churn-prediction.git
 cd telco-churn-prediction
 
@@ -107,6 +107,7 @@ pip install -r requirements.txt
 
 ### Run the Streamlit app:
 streamlit run app/app.py
+```
 
 ## 🌍 Deployment
 The project is deployed on Streamlit Cloud:
