@@ -99,7 +99,7 @@ The final selected model achieved:
 
 ## ⚙️ Installation & Usage  
 ```bash
-Clone the repository:
+### Clone the repository:
 git clone https://github.com/njer1nj0r0ge236/Telco-dataset-customer-churn-prediction-classification-analysis.git
 cd telco-churn-prediction
 
