@@ -19,6 +19,7 @@ Stored in a remote SQL Server database:
 - **Database**: `dapDB`  
 - **Table**: `dbo.LP2_Telco_churn_first_3000`  
 > 🔒 _Read-only access_  
+Saved as `LP2_Telco_churn_first_3000.xlsx`
 
 ### 2. Second Dataset (2000 records)  
 - CSV file: `LP2_Telco-churn-second-2000.csv` (from GitHub repo).  
@@ -26,7 +27,7 @@ Stored in a remote SQL Server database:
 ### 3. Testing Dataset (2000 records)  
 - Excel file: `Telco-churn-last-2000.xlsx` (from OneDrive).  
 - Used exclusively for **final model testing**.  
-
+Saved as `Telco-churn-last-2000(Sheet1).csv`
 > 📌 Note: All datasets were downloaded locally in .csv and .xlsx formats then uploaded into **Google Colab**.  
 
 ---
@@ -61,9 +62,12 @@ Stored in a remote SQL Server database:
    - Logistic Regression  
    - Random Forest  
    - XGBoost Classifier  
-4. Evaluate models with **accuracy, precision, recall, F1-score**.  
+4. Evaluate models with **accuracy, precision, recall, F1-score**.
 5. Deploy best model in a **Streamlit multipage app**.  
 
+### 📝 Note:
+- The **Google Colab** work is saved as `Telco_Customer_Churn.ipynb`
+- Clean and combined  `LP2_Telco-churn-second-2000.csv` and `Telco-churn-last-2000(Sheet1).csv` is saved as `df_combined.csv` 
 ---
 
 ## 🚀 Streamlit App Features  
