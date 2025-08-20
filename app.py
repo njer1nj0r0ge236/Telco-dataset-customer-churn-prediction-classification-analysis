@@ -36,7 +36,7 @@ if page == "Home":
 
         ### 🔗 Useful Links
         - [GitHub Repository](https://github.com/njer1nj0r0ge236/Telco-dataset-customer-churn-prediction-classification-analysis)
-        - [Medium Article](https://medium.com/@njorogediana236/customer-churn-prediction-using-classification-analysis-telco-dataset-c568d1c1babd)
+        - [Medium Article](https://medium.com/@njorogediana236/predicting-customer-churn-in-telecommunications-with-machine-learning-deploying-in-streamlit-224085f1cee7)
         """
     )
     st.image(r"https://github.com/njer1nj0r0ge236/Telco-dataset-customer-churn-prediction-classification-analysis/blob/main/Image%20Aug%2020%2C%202025%2C%2001_06_30%20AM.png")
@@ -316,3 +316,4 @@ elif page == "History":
     else:
 
         st.info("No prediction history found yet. Make some predictions on the 'Predict' page to view a history.")
+
