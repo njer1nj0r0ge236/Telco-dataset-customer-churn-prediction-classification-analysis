@@ -48,7 +48,7 @@ Stored in a remote SQL Server database:
 - **Python**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
 - **Google Colab**: for model building & experimentation  
 - **Streamlit**: for deployment & interactive dashboards  
-- **SQL Server**: acessing the First Dataset (3000 records)
+- **SQL Server**: accessing the First Dataset (3000 records)
 - **GitHub**: version control & collaboration  
 
 ---
@@ -87,8 +87,9 @@ The deployed application contains:
 
 ## 📊 Model Performance  
 
-The final selected model achieved:  
+The final selected model achieved: 
 
+**Logistic Regression**  
 - **Accuracy**: 0.8067  
 - **Precision**: o.6818 
 - **Recall**: 0.5455 
