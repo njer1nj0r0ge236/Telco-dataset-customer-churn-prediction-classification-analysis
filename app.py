@@ -39,7 +39,7 @@ if page == "Home":
         - [Medium Article](https://medium.com/@njorogediana236/customer-churn-prediction-using-classification-analysis-telco-dataset-c568d1c1babd)
         """
     )
-    st.image(r"C:\Users\USER\Desktop\streamlit\Image Aug 20, 2025, 01_06_30 AM.png")
+    st.image(r"https://github.com/njer1nj0r0ge236/Telco-dataset-customer-churn-prediction-classification-analysis/blob/main/Image%20Aug%2020%2C%202025%2C%2001_06_30%20AM.png")
 
 
 # --- Data Page ---
@@ -314,4 +314,5 @@ elif page == "History":
         st.dataframe(history_df.tail(10)) # Show the last 10 predictions
         
     else:
+
         st.info("No prediction history found yet. Make some predictions on the 'Predict' page to view a history.")
