@@ -116,7 +116,7 @@ streamlit run app/app.py
 
 ## 🌍 Deployment
 The project is deployed on Streamlit Cloud:
-👉 [Live App](http://localhost:8501/#telco-customer-churn-prediction-app)
+👉 [Live App](https://telco-customer-churn-predictions.streamlit.app/)
 
 ## 👩‍💻 Author  
 Developed by [Marydiana Njoroge](https://marydiananjorogeportfolio.vercel.app/)  
