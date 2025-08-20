@@ -1,31 +1,124 @@
-# Telco-dataset-customer-churn-prediction-classification-analysis
+# 📊 Telco Customer Churn Prediction  
 
-*Churn* refers to the number of customers who stop using a product or service over a given period of time. Customers churn due to various reasons such as poor customer service, product dissatisfaction, price sensitivity, better alternatives, and changes in circumstances e.g. relocation. A data analyst finds the factors causing churn in data and works towards preventing it.
+## 📝 Project Scenario  
+Customer retention is a critical factor for business growth, especially in competitive industries like telecommunications. With machine learning classification models, businesses can perform **churn analysis** to predict whether a customer is likely to leave.  
 
-*Churn prediction* is the process of using data and analytical models to identify which customers are most likely to stop doing business with or using a company’s product or service in the near future. With churn prediction, a company can take proactive measures to retain customers who are at risk of leaving. Churn prediction helps them to focus more on the customers that are at a high risk of leaving.
-Examples: Netflix subscription, Network service providers
+This project leverages real-world telecom customer data to build, evaluate, and deploy a **churn prediction system** through an interactive **Streamlit web app**.  
 
-*Classification analysis* is a data analytics technique that can be used to predict customer churn. Data analytics professionals typically use *machine learning algorithms* such as logistic regression, decision trees, and support vector machines to predict customer churn using classification analysis. These algorithms analyze data such as customer demographics, purchase history, and interactions with the company to identify patterns that can predict customer churn.
+---
 
-The Dataset used: Telco-Customer-Churn.csv
+## 📂 Datasets  
 
-The dataset includes information about:
+This project uses **three datasets**:  
 
-It has 21 columns
+### 1. First Dataset (3000 records)  
+Stored in a remote SQL Server database:  
+- **Server**: `dap-projects-database.database.windows.net`  
+- **User**: `LP2_project`  
+- **Password**: `Stat$AndD@t@Rul3`  
+- **Database**: `dapDB`  
+- **Table**: `dbo.LP2_Telco_churn_first_3000`  
+> 🔒 _Read-only access_  
 
-Customers who left within the last month – the column is called Churn
+### 2. Second Dataset (2000 records)  
+- CSV file: `LP2_Telco-churn-second-2000.csv` (from GitHub repo).  
 
-Each customer has signed up for services such as phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies.
+### 3. Testing Dataset (2000 records)  
+- Excel file: `Telco-churn-last-2000.xlsx` (from OneDrive).  
+- Used exclusively for **final model testing**.  
 
-Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
+> 📌 Note: All datasets were downloaded locally in .csv and .xlsx formats then uploaded into **Google Colab**.  
 
-Demographic info about customers – gender, age range, and if they have partners and dependents
+---
+
+## 🚀 Project Objectives  
+
+- Build an end-to-end ML pipeline for **churn prediction**  
+- Perform **data preprocessing** (handle missing values, encode categorical variables, scale features)  
+- Conduct **EDA** to uncover customer behavior insights  
+- Train and evaluate multiple ML models  
+- Optimize models with **hyperparameter tuning**  
+- Deploy an **interactive Streamlit web app**  
+- Share the project via **GitHub & Streamlit Cloud**  
+
+---
+
+## 🛠️ Tools & Technologies  
+
+- **Python**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
+- **Google Colab**: for model building & experimentation  
+- **Streamlit**: for deployment & interactive dashboards  
+- **SQL Server**: acessing the First Dataset (3000 records)
+- **GitHub**: version control & collaboration  
+
+---
+
+## ⚙️ How It Works  
+
+1. Load & preprocess datasets (CSV + Excel).  
+2. Encode categorical variables & scale numerical features.  
+3. Train models including:  
+   - Logistic Regression  
+   - Random Forest  
+   - XGBoost Classifier  
+4. Evaluate models with **accuracy, precision, recall, F1-score**.  
+5. Deploy best model in a **Streamlit multipage app**.  
+
+---
+
+## 🚀 Streamlit App Features  
+
+The deployed application contains:  
+
+- **🏠 Home Page** – Overview of the project & links (GitHub, LinkedIn, Medium).  
+- **📂 Data Page** – Displays sample/raw data, categorical & numeric features.  
+- **📊 Dashboard Page** –  
+  - EDA dashboard: customer churn insights  
+  - KPI dashboard: business metrics  
+- **🤖 Predict Page** –  
+  - Collects user input 
+  - Loads trained ML model  
+  - Outputs churn prediction + probability  
+- **🕒 History Page** – Displays previous predictions with timestamps & inputs.  
 
 
-### Hypothesis
-**Null hypothesis**: 
-    there is a significant relationship between _customer churn_ and at least two of the **independent variables**
-    _(gender, senior citizen status, artner, dependents, tenure, phone service, multiple lines, internet service, online security,online backup, device protection, tech support, streaming TV, streaming movies, contract, paperless billing, payment method, monthly charges, total charges)_.
 
-**Alternative hypothesis**: 
-  There is no significant relationship between any of independent variable and customer churn.
+---
+
+## 📊 Model Performance  
+
+The final selected model achieved:  
+
+- **Accuracy**: 0.8067  
+- **Precision**: o.6818 
+- **Recall**: 0.5455 
+- **F1-score**: 0.6061   
+
+---
+
+## ⚙️ Installation & Usage  
+Clone the repository:  
+```bash
+git clone https://github.com/your-username/telco-churn-prediction.git
+cd telco-churn-prediction
+
+### Create a virtual environment & install dependencies:
+pip install -r requirements.txt
+
+### Run the Streamlit app:
+streamlit run app/app.py
+
+## 🌍 Deployment
+The project is deployed on Streamlit Cloud:
+👉 [Live App](http://localhost:8501/#telco-customer-churn-prediction-app)
+
+## 👩‍💻 Author  
+Developed by [Marydiana Njoroge](https://marydiananjorogeportfolio.vercel.app/)  
+💼 [LinkedIn](https://www.linkedin.com/in/marydiana-njoroge-41b236244/)  
+🐙 [GitHub](https://github.com/njer1nj0r0ge236)  
+✍️ [Medium](https://medium.com/@njorogediana236)  
+
+
+## 📌 License
+This project is licensed under the [MIT License](./LICENSE) – see the LICENSE
+ file for details.
