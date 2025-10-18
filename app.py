@@ -132,6 +132,7 @@ elif page == "Predict":
     Contract_Month_to_month = st.selectbox("Contract Month-to-Month", [0, 1])
     Contract_One_year = st.selectbox("Contract One Year", [0, 1])
     Contract_Two_year = st.selectbox("Contract Two Year", [0, 1])
+    PaymentMethod_Bank_transfer_automatic = st.selectbox("Payment Method Bank Transfer (automatic)", [0, 1])
     PaymentMethod_Credit_card_automatic = st.selectbox("Payment Method Credit Card (automatic)", [0, 1])
     PaymentMethod_Electronic_check = st.selectbox("Payment Method Electronic Check", [0, 1])
     PaymentMethod_Mailed_check = st.selectbox("Payment Method Mailed Check", [0, 1])
@@ -324,5 +325,6 @@ elif page == "History":
     else:
 
         st.info("No prediction history found yet. Make some predictions on the 'Predict' page to view a history.")
+
 
 
