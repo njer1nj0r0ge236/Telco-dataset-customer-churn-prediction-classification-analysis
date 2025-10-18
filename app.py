@@ -27,8 +27,7 @@ if page == "Home":
     st.title("Telco Customer Churn Prediction App")
     st.image("https://raw.githubusercontent.com/njer1nj0r0ge236/Telco-dataset-customer-churn-prediction-classification-analysis/main/Image%20Aug%2020%2C%202025%2C%2001_06_30%20AM.png")
     st.write(
-        """
-        Welcome! 👋  
+        """  
         This app predicts customer churn based on various features such as gender, contract method, service usage.  
         
         ### 📌 Overview
@@ -328,6 +327,7 @@ elif page == "History":
     else:
 
         st.info("No prediction history found yet. Make some predictions on the 'Predict' page to view a history.")
+
 
 
 
