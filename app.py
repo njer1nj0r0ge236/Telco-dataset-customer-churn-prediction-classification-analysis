@@ -137,27 +137,35 @@ elif page == "Predict":
     PaymentMethod_Mailed_check = st.selectbox("Payment Method Mailed Check", [0, 1])
     
     if st.button("Predict"):
-        # Create a DataFrame from user inputs
+        # Create DataFrame from user inputs
         input_data = pd.DataFrame([[
-            SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, OnlineSecurity,
-            OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies,
-            PaperlessBilling, MonthlyCharges, TotalCharges, gender_Male,
-            InternetService_Fiber_optic, InternetService_No, Contract_One_year,
-            Contract_Two_year, PaymentMethod_Credit_card_automatic,
+            SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines,
+            OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV,
+            StreamingMovies, PaperlessBilling, MonthlyCharges, TotalCharges,
+            gender_Female, gender_Male, InternetService_DSL, InternetService_Fiber_optic,
+            InternetService_No, Contract_Month_to_month, Contract_One_year, Contract_Two_year,
+            PaymentMethod_Bank_transfer_automatic, PaymentMethod_Credit_card_automatic,
             PaymentMethod_Electronic_check, PaymentMethod_Mailed_check
         ]], columns=[
             'SeniorCitizen', 'Partner', 'Dependents', 'tenure', 'PhoneService',
             'MultipleLines', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
             'TechSupport', 'StreamingTV', 'StreamingMovies', 'PaperlessBilling',
-            'MonthlyCharges', 'TotalCharges', 'gender_Male',
-            'InternetService_Fiber optic', 'InternetService_No', 'Contract_One year',
-            'Contract_Two year', 'PaymentMethod_Credit card (automatic)',
+            'MonthlyCharges', 'TotalCharges', 'gender_Female', 'gender_Male',
+            'InternetService_DSL', 'InternetService_Fiber_optic', 'InternetService_No',
+            'Contract_Month-to-month', 'Contract_One_year', 'Contract_Two_year',
+            'PaymentMethod_Bank transfer (automatic)',
+            'PaymentMethod_Credit card (automatic)',
             'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check'
         ])
-        
-        # Ensure column order matches the training data
-        cols_ordered = model.feature_names_in_
-        input_data = input_data[cols_ordered]
+
+        # 🔧 Align columns to match model training
+        missing_cols = set(model.feature_names_in_) - set(input_data.columns)
+        for col in missing_cols:
+            input_data[col] = 0  # Add missing columns as 0
+
+        # Reorder columns to match model training
+        input_data = input_data[model.feature_names_in_]
+
 
         # Make prediction
         prediction = model.predict(input_data)
@@ -316,4 +324,5 @@ elif page == "History":
     else:
 
         st.info("No prediction history found yet. Make some predictions on the 'Predict' page to view a history.")
+
 
